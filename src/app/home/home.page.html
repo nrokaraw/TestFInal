@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Student
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content>
+    <ion-button (click)="adddata()" color="success" end>Create</ion-button>
+    <ion-card *ngFor="let item of dataList">
+      <ion-card-content>
+        {{item.std_id}} <br>
+        {{item.std_name}} <br>
+        {{item.std_last}} <br>
+        {{item.std_detail}} <br>
+      </ion-card-content>
+
+      <ion-button color="warning" (click)="editdata(item.std_id)">แก้ไข</ion-button>
+        <ion-button color="danger" (click)="deletedata(item.std_id)" >ลบ</ion-button>
+
+    </ion-card>
+  
+</ion-content>
+
